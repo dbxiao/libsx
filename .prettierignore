@@ -1,0 +1,10 @@
+**/.git
+**/.svn
+**/.hg
+**/node_modules
+**/dist
+**/.dumi
+build
+coverage
+docs
+dist
