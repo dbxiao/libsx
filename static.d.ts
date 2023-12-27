@@ -10,8 +10,5 @@ declare module '*.scss'
 
 declare global {}
 
-export interface IUnitObj {
-    uncompressedSize: keyof typeof IUnit
-    compressedSize: keyof typeof IUnit
-}
+export interface IUnitObj {}
 

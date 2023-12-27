@@ -1,24 +1,24 @@
 {
     "pluginSearchDirs": false,
     "bracketSpacing": true,
-    "quoteProps": 'as-needed',
+    "quoteProps": "as-needed",
     "jsxSingleQuote": true,
     "useTabs": true,
     "semi": false,
     "tabWidth": 4,
     "printWidth": 120,
-    "proseWrap": 'never',
+    "proseWrap": "never",
     "singleQuote": true,
-    "trailingComma": 'all',
+    "trailingComma": "all",
     "arrowParens": "always",
     "endOfLine": "lf",
     "embeddedLanguageFormatting": "auto",
     "overrides": [
         {
-            "files": '*.md',
+            "files": "*.md",
             "options": {
-                "proseWrap": 'preserve',
-            },
-        },
-    ],
+                "proseWrap": "preserve"
+            }
+        }
+    ]
 }
