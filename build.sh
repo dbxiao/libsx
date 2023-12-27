@@ -31,7 +31,7 @@ b2dist() {
     rm -fr dist/
     sh install.sh
     pnpm run docs:build
-    zip -r ./dist/dist.zip ./dist/*
+    # zip -r ./dist/dist.zip ./dist/*
 }
 
 # file push to deploy directory
