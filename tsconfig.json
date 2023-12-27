@@ -1,26 +1,30 @@
 {
-    "compilerOptions": {
-        "strict": true,
-        "declaration": true,
-        "skipLibCheck": true,
-        "esModuleInterop": true,
-        "jsx": "react",
-        "baseUrl": "./",
-        "paths": {
-            "@@/*": [
-                ".dumi/tmp/*"
-            ],
-            "libsx": [
-                "src"
-            ],
-            "libsx/*": [
-                "src/*",
-                "*"
-            ]
-        }
-    },
-    "include": [
-        ".dumirc.ts",
-        "src/**/*"
-    ]
+	"compilerOptions": {
+		"composite": true,
+		"target": "ESNext",
+		"useDefineForClassFields": true,
+		"lib": ["DOM", "DOM.Iterable", "ESNext"],
+		"allowJs": true,
+		"strict": true,
+		"skipLibCheck": true,
+		"esModuleInterop": true,
+		"allowSyntheticDefaultImports": true,
+		"isolatedModules": true,
+		"declaration": true,
+		"declarationDir": "dist/pkg/types",
+		"emitDeclarationOnly": true,
+		"jsx": "react-jsx",
+		"baseUrl": "./",
+		"paths": {
+			"@common": ["src/common"],
+			"@widget": ["src/widget"],
+			"@pkg": ["src/pkg"],
+			"@common*": ["src/common*"],
+			"@widget*": ["src/widget*"],
+			"@pkg*": ["src/pkg*"]
+		}
+	},
+	"files": ["static.d.ts"],
+	"include": ["src/**/*", "package.json", "tsconfig.json", "static.d.ts"],
+	"exclude": ["node_modules", "out", "dist", "test", "download", "**/*.spec.ts", "**/*.spec.js"]
 }

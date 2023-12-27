@@ -1,74 +1,100 @@
 {
-    "name": "libsx",
-    "version": "0.0.1",
-    "description": "A react library developed with dumi",
-    "module": "dist/index.js",
-    "types": "dist/index.d.ts",
-    "scripts": {
-        "start": "npm run dev",
-        "dev": "dumi dev",
-        "build": "father build",
-        "build:watch": "father dev",
-        "docs:build": "dumi build",
-        "prepare": "husky install && dumi setup",
-        "doctor": "father doctor",
-        "lint": "npm run lint:es && npm run lint:css",
-        "lint:css": "stylelint \"{src,test}/**/*.{css,less}\"",
-        "lint:es": "eslint \"{src,test}/**/*.{js,jsx,ts,tsx}\"",
-        "prepublishOnly": "father doctor && npm run build"
-    },
-    "authors": [
-        "dbxiao <dbxiao@foxmail.com>"
-    ],
-    "license": "MIT",
-    "files": [
-        "dist"
-    ],
-    "commitlint": {
-        "extends": [
-            "@commitlint/config-conventional"
-        ]
-    },
-    "lint-staged": {
-        "*.{md,json}": [
-            "prettier --write --no-error-on-unmatched-pattern"
-        ],
-        "*.{css,less}": [
-            "stylelint --fix",
-            "prettier --write"
-        ],
-        "*.{js,jsx}": [
-            "eslint --fix",
-            "prettier --write"
-        ],
-        "*.{ts,tsx}": [
-            "eslint --fix",
-            "prettier --parser=typescript --write"
-        ]
-    },
-    "publishConfig": {
-        "access": "public"
-    },
-    "peerDependencies": {
-        "react": ">=18.0.0",
-        "react-dom": ">=18.0.0"
-    },
-    "devDependencies": {
-        "@commitlint/cli": "^17.1.2",
-        "@commitlint/config-conventional": "^17.1.0",
-        "@types/react": "^18.0.0",
-        "@types/react-dom": "^18.0.0",
-        "@umijs/lint": "^4.0.0",
-        "dumi": "^2.2.13",
-        "eslint": "^8.23.0",
-        "father": "^4.3.8",
-        "husky": "^8.0.1",
-        "lint-staged": "^13.0.3",
-        "prettier": "^2.7.1",
-        "prettier-plugin-organize-imports": "^3.0.0",
-        "prettier-plugin-packagejson": "^2.2.18",
-        "react": "^18.0.0",
-        "react-dom": "^18.0.0",
-        "stylelint": "^14.9.1"
-    }
+	"name": "@libsx/cola",
+	"version": "0.1.0",
+	"description": "",
+	"keywords": [
+		"broadcast",
+		"libs",
+		"util",
+		"time",
+		"os",
+		"url",
+		"array",
+		"object"
+	],
+	"author": "dbxiao <dbxiao@foxmail.com>",
+	"license": "MIT",
+	"type": "module",
+	"types": "dist/pkg/src/index.d.ts",
+	"publishConfig": {
+		"access": "public"
+	},
+	"scripts": {
+		"dev": "dumi dev",
+		"build": "vite build",
+		"father:build": "father build",
+		"father:watch": "father dev",
+		"docs:build": "dumi build",
+		"prepare": "husky install && dumi setup",
+		"doctor": "father doctor",
+		"lint": "npm run lint:es && npm run lint:css",
+		"lint:css": "stylelint \"{src,test}/**/*.{css,less}\"",
+		"lint:es": "eslint \"{src,test}/**/*.{js,jsx,ts,tsx}\"",
+		"prepublishOnly": "father doctor && npm run build"
+	},
+	"files": [
+		"dist/pkg"
+	],
+	"exports": {
+		".": {
+			"import": "./dist/pkg/index/index.es.js",
+			"require": "./dist/pkg/index/index.cjs.js"
+		},
+		"./utils": {
+			"import": "./dist/pkg/utils/utils.es.js",
+			"require": "./dist/pkg/utils/utils.cjs.js"
+		},
+		"./broadcast": {
+			"import": "./dist/secondary.es.js",
+			"require": "./dist/secondary.cjs"
+		}
+	},
+	"commitlint": {
+		"extends": [
+			"@commitlint/config-conventional"
+		]
+	},
+	"lint-staged": {
+		"*.{md,json}": [
+			"prettier --write --no-error-on-unmatched-pattern"
+		],
+		"*.{css,less}": [
+			"stylelint --fix",
+			"prettier --write"
+		],
+		"*.{js,jsx}": [
+			"eslint --fix",
+			"prettier --write"
+		]
+	},
+	"dependencies": {
+		"@babel/runtime": "^7.23.6"
+	},
+	"peerDependencies": {
+		"react": ">=18.0.0",
+		"react-dom": ">=18.0.0"
+	},
+	"devDependencies": {
+		"@vitejs/plugin-react": "^4.2.1",
+		"@commitlint/cli": "^17.1.2",
+		"@commitlint/config-conventional": "^17.1.0",
+		"@types/node": "^20.10.5",
+		"@types/react": "^18.0.0",
+		"@types/react-dom": "^18.0.0",
+		"@umijs/lint": "^4.0.0",
+		"antd": "^5.12.5",
+		"dumi": "^2.2.13",
+		"eslint": "^8.23.0",
+		"father": "^4.3.8",
+		"husky": "^8.0.1",
+		"lint-staged": "^13.0.3",
+		"mocha": "^10.2.0",
+		"prettier": "^2.7.1",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"stylelint": "^14.9.1",
+		"typescript": "^5.3.3",
+		"vite": "^5.0.10",
+		"vite-plugin-dts": "^3.7.0"
+	}
 }

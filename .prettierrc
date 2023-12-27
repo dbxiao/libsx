@@ -1,0 +1,24 @@
+{
+    "pluginSearchDirs": false,
+    "bracketSpacing": true,
+    "quoteProps": 'as-needed',
+    "jsxSingleQuote": true,
+    "useTabs": true,
+    "semi": false,
+    "tabWidth": 4,
+    "printWidth": 120,
+    "proseWrap": 'never',
+    "singleQuote": true,
+    "trailingComma": 'all',
+    "arrowParens": "always",
+    "endOfLine": "lf",
+    "embeddedLanguageFormatting": "auto",
+    "overrides": [
+        {
+            "files": '*.md',
+            "options": {
+                "proseWrap": 'preserve',
+            },
+        },
+    ],
+}

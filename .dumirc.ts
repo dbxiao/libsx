@@ -2,15 +2,18 @@
  * .dumirc.ts
  */
 import { defineConfig } from 'dumi'
-const { npm_package_name } = process.env
+const { NODE_ENV } = process.env
 
 export default defineConfig({
+    publicPath: NODE_ENV === 'production' ? '/res/libsx/' : '/',
     resolve: {
-        docDirs: ['docs', 'src'],
+        // entryFile: 'src/pkg/index.ts',
+        docDirs: ['docs', 'src/pkg'],
     },
-    outputPath: `dist/res/${npm_package_name}`,
+    // apiParser: {},
+    outputPath: `dist/res/libsx`,
     themeConfig: {
-        name: npm_package_name,
-        footer: `<p style='font-size: 12px; color: #666;'>Copyright © 2023 ${npm_package_name}. MIT Licensed. Created by dbxiao</p>`
-    }
+        name: `cola`,
+        footer: `<p style='font-size: 12px; color: #666;'>Copyright © 2023 @libsx. MIT Licensed. Created by dbxiao</p>`
+    },
 });

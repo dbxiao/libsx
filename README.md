@@ -1,40 +1,15 @@
-# libsx
+# Libsx
 
-[![NPM version](https://img.shields.io/npm/v/libsx.svg?style=flat)](https://npmjs.org/package/libsx)
-[![NPM downloads](http://img.shields.io/npm/dm/libsx.svg?style=flat)](https://npmjs.org/package/libsx)
+Libsx 致力于提供小巧、高效、安全、易用的前端开发工具库（colajs）
 
-A react library developed with dumi
+## 产品
 
-## Usage
+### Broadcast
 
-TODO
+广播库，使用 JS ES6 原生开发，无第三方依赖，无框架限制。
 
-## Options
+[立即查看]('https://www.libsx.com')
 
-TODO
+## GitHub
 
-## Development
-
-```bash
-# install dependencies
-$ pnpm install
-
-# develop library by docs demo
-$ pnpm start
-
-# build library source code
-$ pnpm run build
-
-# build library source code in watch mode
-$ pnpm run build:watch
-
-# build docs
-$ pnpm run docs:build
-
-# check your project for potential problems
-$ pnpm run doctor
-```
-
-## LICENSE
-
-MIT
+https://github.com/dbxiao/libsx
