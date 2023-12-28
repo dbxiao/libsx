@@ -75,13 +75,14 @@
 		"react-dom": ">=18.0.0"
 	},
 	"devDependencies": {
-		"@vitejs/plugin-react": "^4.2.1",
+		"@ant-design/icons": "^5.2.6",
 		"@commitlint/cli": "^17.1.2",
 		"@commitlint/config-conventional": "^17.1.0",
 		"@types/node": "^20.10.5",
 		"@types/react": "^18.0.0",
 		"@types/react-dom": "^18.0.0",
 		"@umijs/lint": "^4.0.0",
+		"@vitejs/plugin-react": "^4.2.1",
 		"antd": "^5.12.5",
 		"dumi": "^2.2.13",
 		"eslint": "^8.23.0",

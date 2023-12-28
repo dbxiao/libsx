@@ -25,6 +25,6 @@
 		}
 	},
 	"files": ["static.d.ts"],
-	"include": ["src/**/*", "package.json", "tsconfig.json", "static.d.ts"],
+	"include": ["src/**/*", "package.json", "tsconfig.json", "static.d.ts", ".dumirc.ts"],
 	"exclude": ["node_modules", "out", "dist", "test", "download", "**/*.spec.ts", "**/*.spec.js"]
 }
